@@ -1,0 +1,14 @@
+---
+//import WorkingProgress from '@/components/react/WorkingProgress'
+import Layout from '../layouts/Layout.astro'
+// import Booking from '../components/react/Booking.tsx'
+// import BookingCalendly from '../components/react/BookingCalendly.tsx'
+import CalendlyEmbed from '../components/react/booking/CalendlyEmbed.tsx'
+---
+
+<Layout title="Agenda tu Diagnóstico InmoBoost">
+  <!-- <Booking client:visible /> -->
+  <!-- <BookingCalendly client:visible /> -->
+  <CalendlyEmbed client:visible />
+  <!-- <WorkingProgress client:visible /> -->
+</Layout>
