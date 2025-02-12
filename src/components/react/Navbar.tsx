@@ -8,7 +8,7 @@ export default function Navbar() {
           <Mountain className="h-6 w-6" />
           <span className="text-2xl font-bold text-gray-800">TechFlow</span>
         </a>
-        {/* <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex space-x-8">
           <a href="/" className="text-gray-600 hover:text-gray-900">
             Inicio
           </a>
@@ -24,7 +24,7 @@ export default function Navbar() {
           <a href="/contact" className="text-gray-600 hover:text-gray-900">
             Contacto
           </a>
-        </div> */}
+        </div>
       </div>
     </nav>
   )

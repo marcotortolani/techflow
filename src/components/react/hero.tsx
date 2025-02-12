@@ -1,16 +1,17 @@
 export default function Hero() {
   return (
     <section className=" relative min-h-screen flex items-center">
-      <img
-        src="/placeholder.svg?height=1080&width=1920"
-        alt="Modern office background"
-        // layout="fill"
-        // objectFit="cover"
-        className="filter brightness-50 object-fill "
-      />
+      <div className=" absolute h-full overflow-hidden">
+        <img
+          src="/office-background.webp"
+          alt="Modern office background"
+          className="h-full w-auto xl:w-full xl:h-auto filter brightness-50 object-cover "
+        />
+      </div>
+
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 font-montserrat">
+          <h1 className=" text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 font-montserrat">
             Haz que tu negocio funcione contigo, no que dependa de ti.
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-8 font-poppins">
