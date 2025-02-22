@@ -3,21 +3,21 @@ import Hero from './hero'
 import Benefits from './benefits'
 import Problems from './problems'
 import Services from './services'
-import CaseStudies from './case-studies'
+import Testimonials from './testimonials'
 import Contact from './contact'
 import Footer from './footer'
 
 export default function Component() {
   return (
-    <div className="flex flex-col h-screen ">
+    <div className="relative flex flex-col h-screen ">
       <Header />
 
-      <main>
+      <main id="home">
         <Hero />
         <Benefits />
         <Problems />
         <Services />
-        <CaseStudies />
+        <Testimonials />
         <Contact />
       </main>
       <Footer />
@@ -26,7 +26,6 @@ export default function Component() {
           NOS ESTAMOS RENOVANDO
         </h1>
       </div> */}
-     
     </div>
   )
 }

@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react'
-import Navbar from "./Navbar"
+import Navbar from './Navbar'
+import { log } from 'node_modules/astro/dist/core/logger/core'
+import { Mountain } from 'lucide-react'
+import MenuMobile from './menu-mobile'
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(true)
@@ -29,15 +32,20 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ease-in-out ${
-        isVisible ? 'translate-y-0' : '-translate-y-full'
-      } ${
+      className={`fixed top-0 z-50 w-full py-4 px-8 transition-all duration-300 ease-in-out  ${
         lastScrollY > 50
           ? ' backdrop-blur-md bg-white/70 shadow-sm shadow-black/50 '
-          : ' bg-primary'
+          : ' bg-white'
       }`}
     >
-      <Navbar />
+      <div className="container mx-auto flex justify-between items-center">
+        <a href="/" className="flex items-center gap-2">
+          <Mountain className="h-6 w-6" />
+          <span className="text-2xl font-bold text-gray-800">TechFlow</span>
+        </a>
+        <Navbar />
+        <MenuMobile />
+      </div>
     </header>
   )
 }

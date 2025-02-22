@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
-export default function CaseStudies() {
-  const cases = [
+export default function Testimonials() {
+  const TESTIMONIALS = [
     {
       title: 'Muebles Web (eCommerce)',
       problem: 'El dueño estaba saturado, tomando todas las decisiones.',
@@ -25,12 +25,15 @@ export default function CaseStudies() {
 
   const [currentCase, setCurrentCase] = useState(0)
 
-  const nextCase = () => setCurrentCase((prev) => (prev + 1) % cases.length)
+  const nextCase = () =>
+    setCurrentCase((prev) => (prev + 1) % TESTIMONIALS.length)
   const prevCase = () =>
-    setCurrentCase((prev) => (prev - 1 + cases.length) % cases.length)
+    setCurrentCase(
+      (prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length
+    )
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-50" id="testimonials">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-900">
           Ellos confiaron en nosotros y transformaron su forma de trabajar
@@ -38,16 +41,16 @@ export default function CaseStudies() {
         <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-blue-900 mb-2">
-              {cases[currentCase].title}
+              {TESTIMONIALS[currentCase].title}
             </h3>
             <p className="text-gray-600 italic mb-4">
-              Problema: {cases[currentCase].problem}
+              Problema: {TESTIMONIALS[currentCase].problem}
             </p>
             <p className="text-gray-700 mb-4">
-              Solución: {cases[currentCase].solution}
+              Solución: {TESTIMONIALS[currentCase].solution}
             </p>
             <p className="text-lime-600 font-bold">
-              Resultado: {cases[currentCase].result}
+              Resultado: {TESTIMONIALS[currentCase].result}
             </p>
           </div>
           <div className="flex justify-between items-center">
@@ -58,7 +61,7 @@ export default function CaseStudies() {
               <ChevronLeft className="w-6 h-6" />
             </button>
             <span className="text-gray-500">
-              {currentCase + 1} / {cases.length}
+              {currentCase + 1} / {TESTIMONIALS.length}
             </span>
             <button
               onClick={nextCase}

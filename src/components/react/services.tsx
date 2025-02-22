@@ -21,7 +21,7 @@ export default function Services() {
   ]
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white" id="services">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-900">
           Nuestras soluciones, diseñadas para transformar tu negocio
