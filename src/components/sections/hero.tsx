@@ -11,10 +11,10 @@ export default function Hero() {
             className="absolute inset-0 bg-gradient-to-br from-background via-background/80 to-background/30 backdrop-blur-sm z-10"
         ></div>
         <Image
-            src="https://placehold.co/1920x1080.png"
+            src="/images/background-office.webp"
             alt="Dueño de negocio relajado en su oficina viendo métricas en un monitor, gracias a la automatización de TechFlow"
             fill
-            className="object-cover opacity-20"
+            className="object-cover opacity-30"
             data-ai-hint="office relaxation"
             priority
         />
